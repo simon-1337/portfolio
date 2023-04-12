@@ -2,17 +2,14 @@
     font-family: Inter, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 }
 
-app-above-the-fold {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .dark-background {
     background-color: #000000;
@@ -22,4 +19,7 @@ app-above-the-fold {
     background-color: #131111;
 }
 
-
+.standard-padding {
+    padding-left: 120px;
+    padding-right: 120px;
+}

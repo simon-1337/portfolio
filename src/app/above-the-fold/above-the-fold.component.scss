@@ -1,12 +1,52 @@
 .profile-img {
-    height: 250px;
+    height: 441px;
+    background-color: #FA2759;
+    border-radius: 100%;
 }
 
 .above-the-fold-left {
     display: flex;
     flex-direction: column;
+    gap: 72px;
+
+    button {
+        width: fit-content;
+        font-size: 18px;
+        color: #2DFCD8;
+        background-color: transparent;
+        border: 2px solid #2DFCD8;
+        height: 78px;
+        width: 300px;
+        cursor: pointer;
+    }
 
     span {
         color: white;
+        font-weight: 700;
+        font-size: 68px;
+    }
+}
+
+.pink-name {
+    color: #FA2759 !important;
+}
+
+.blue-name {
+    color: #2DFCD8 !important;
+}
+
+.move-down {
+    position: absolute;
+    bottom: 42px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 54px;
+    height: 54px;
+    cursor: pointer;
+    
+    &:hover {
+        bottom: 48px;
     }
 }

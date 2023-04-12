@@ -1,0 +1,46 @@
+h2 {
+    color: white;
+    font-size: 36px;
+    font-weight: 500;
+    margin-block-start: 36px;
+    margin-block-end: 36px;
+}
+
+.skills-ctn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 42px;
+    justify-content: center;
+    max-width: 800px;
+}
+
+.skill-box {
+    position: relative;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        width: 180px;
+        background-color: white;
+        font-weight: 400;
+        font-size: 18px;
+        border-radius: 6px;
+    }
+
+    img {
+        position: absolute;
+        z-index: 999;
+        top: -21px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        height: 24px;
+        border-radius: 100%;
+        padding: 14px;
+        background-color: white;
+        box-shadow: 0px 4px 4px rgba(197, 197, 197, 0.25);
+    }
+}
