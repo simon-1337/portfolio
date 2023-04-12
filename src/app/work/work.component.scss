@@ -1,0 +1,37 @@
+.btn-section {
+    display: flex;
+    gap: 6px;
+
+    button {
+        background-color: transparent;
+        border: 2px solid #FA2759;
+        width: 128px;
+        height: 70px;
+        font-size: 18px;
+        font-weight: 500;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #FA2759;
+        }
+    }
+}
+
+.porfolio {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    gap: 28px;
+    padding-bottom: 112px;
+}
+
+
+.portfolio-child {
+
+    img {
+        width: 442px;
+        height: 368px;
+    }
+}

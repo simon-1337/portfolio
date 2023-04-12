@@ -1,23 +1,20 @@
 h2 {
-    color: white;
-    font-size: 36px;
-    font-weight: 500;
-    margin-block-start: 36px;
-    margin-block-end: 36px;
+    margin-block-end: 66px;
 }
 
 .skills-ctn {
     display: flex;
     flex-wrap: wrap;
-    gap: 42px;
+    gap: 72px;
     justify-content: center;
     max-width: 800px;
+    padding-bottom: 112px;
 }
 
 .skill-box {
     position: relative;
 
-    div {
+    span {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -29,18 +26,25 @@ h2 {
         border-radius: 6px;
     }
 
-    img {
+    div {
         position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         z-index: 999;
-        top: -21px;
+        top: -30px;
         left: 0;
         right: 0;
         margin-left: auto;
         margin-right: auto;
-        height: 24px;
         border-radius: 100%;
-        padding: 14px;
+        width: 60px;
+        height: 60px;
         background-color: white;
-        box-shadow: 0px 4px 4px rgba(197, 197, 197, 0.25);
+        box-shadow: 0px 4px 4px rgba(190, 190, 190, 0.3);
+    }
+
+    img {
+        height: 24px;
     }
 }

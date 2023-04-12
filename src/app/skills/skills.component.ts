@@ -10,15 +10,15 @@ export class SkillsComponent {
   skills: any = [
       {
         'name': 'JavaScript',
-        'img': '/assets/img/down.png',
+        'img': '/assets/img/javascript.svg',
       },
       {
         'name': 'HTML',
-        'img': '/assets/img/down.png',
+        'img': '/assets/img/html.svg',
       },
       {
         'name': 'CSS/SCSS',
-        'img': '/assets/img/down.png',
+        'img': '/assets/img/css.svg',
       },
       {
         'name': 'Angular',
@@ -26,23 +26,23 @@ export class SkillsComponent {
       },
       {
         'name': 'TypeScript',
-        'img': '/assets/img/down.png',
+        'img': '/assets/img/typescript.svg',
       },
       {
         'name': 'Firebase Database',
-        'img': '/assets/img/down.png',
+        'img': '/assets/img/Firebase.svg',
       },
       {
         'name': 'Git',
-        'img': '/assets/img/down.png',
+        'img': '/assets/img/git.svg',
       },
       {
         'name': 'Rest API',
-        'img': '/assets/img/down.png',
+        'img': '/assets/img/api.svg',
       },
       {
-        'name': 'Git',
-        'img': '/assets/img/down.png',
+        'name': 'Scrum',
+        'img': '/assets/img/scrum.svg',
       },
     ];
 }

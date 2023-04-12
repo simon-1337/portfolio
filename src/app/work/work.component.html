@@ -1,0 +1,33 @@
+<h2>My Work</h2>
+
+<div class="btn-section">
+    <button (click)="filterProjects('all')">All</button>
+    <button (click)="filterProjects('angular')">Angular</button>
+    <button (click)="filterProjects('js')">JavaScript</button>
+</div>
+<div class="porfolio">
+    <div *ngIf="all || js" class="portfolio-child">
+        <div class="porfolio-hover">
+
+        </div>
+        <img src="assets/img/work.jpg">
+    </div>
+    <div *ngIf="all || js" class="portfolio-child">
+        <div class="porfolio-hover">
+
+        </div>
+        <img src="assets/img/work.jpg">
+    </div>
+    <div *ngIf="all || angular" class="portfolio-child">
+        <div class="porfolio-hover">
+
+        </div>
+        <img src="assets/img/work.jpg">
+    </div>
+    <div *ngIf="all || angular" class="portfolio-child">
+        <div class="porfolio-hover">
+
+        </div>
+        <img src="assets/img/work.jpg">
+    </div>
+</div>

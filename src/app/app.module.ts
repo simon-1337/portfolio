@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { AboveTheFoldComponent } from './above-the-fold/above-the-fold.component';
 import { HeaderComponent } from './header/header.component';
 import { SkillsComponent } from './skills/skills.component';
+import { WorkComponent } from './work/work.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboveTheFoldComponent,
     HeaderComponent,
-    SkillsComponent
+    SkillsComponent,
+    WorkComponent
   ],
   imports: [
     BrowserModule,
