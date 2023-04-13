@@ -1,33 +1,69 @@
 <h2>My Work</h2>
 
 <div class="btn-section">
-    <button (click)="filterProjects('all')">All</button>
-    <button (click)="filterProjects('angular')">Angular</button>
-    <button (click)="filterProjects('js')">JavaScript</button>
+    <button [ngClass]="{'btn-selected' : all}" (click)="filterProjects('all')">All</button>
+    <button [ngClass]="{'btn-selected' : angular}" (click)="filterProjects('angular')">Angular</button>
+    <button [ngClass]="{'btn-selected' : js}" (click)="filterProjects('js')">JavaScript</button>
 </div>
-<div class="porfolio">
+<div class="portfolio">
+    
+    <!--Join-->
     <div *ngIf="all || js" class="portfolio-child">
-        <div class="porfolio-hover">
-
+        <div class="portfolio-hover">
+            <div>
+                <h3>JOIN</h3>
+                <span>JavaScript based Kanban Board (Group Project)</span>
+            </div>
+            <div class="portfolio-btns">
+                <button>Try Out</button>
+                <button>Github</button>
+            </div>
         </div>
-        <img src="assets/img/work.jpg">
+        <img src="assets/img/join.jpg">
     </div>
+
+    <!--El Pollo Loco-->
     <div *ngIf="all || js" class="portfolio-child">
-        <div class="porfolio-hover">
-
+        <div class="portfolio-hover">
+            <div>
+                <h3>EL POLLO LOCO</h3>
+                <span>JavaScript based Jump ’n’ Run game</span>
+            </div>
+            <div class="portfolio-btns">
+                <button>Try Out</button>
+                <button>Github</button>
+            </div>
         </div>
-        <img src="assets/img/work.jpg">
+        <img src="assets/img/epl.jpg">
     </div>
-    <div *ngIf="all || angular" class="portfolio-child">
-        <div class="porfolio-hover">
 
+    <!--Porfolio-->
+    <div *ngIf="all || angular" class="portfolio-child">
+        <div class="portfolio-hover">
+            <div>
+                <h3>PORTFOLIO</h3>
+                <span>Angular based personal webpage</span>
+            </div>
+            <div class="portfolio-btns">
+                <button>Try Out</button>
+                <button>Github</button>
+            </div>
         </div>
-        <img src="assets/img/work.jpg">
+        <img src="assets/img/join.jpg">
     </div>
-    <div *ngIf="all || angular" class="portfolio-child">
-        <div class="porfolio-hover">
 
+    <!--Angular Project 2-->
+    <div *ngIf="all || angular" class="portfolio-child">
+        <div class="portfolio-hover">
+            <div>
+                <h3>RING OF FIRE</h3>
+                <span>Angular based multiplayer card game</span>
+            </div>
+            <div class="portfolio-btns">
+                <button>Try Out</button>
+                <button>Github</button>
+            </div>
         </div>
-        <img src="assets/img/work.jpg">
+        <img src="assets/img/rof.jpg">
     </div>
 </div>

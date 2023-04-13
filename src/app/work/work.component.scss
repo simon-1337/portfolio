@@ -18,20 +18,84 @@
     }
 }
 
-.porfolio {
+.btn-selected {
+    background-color: #FA2759 !important;
+}
+
+.portfolio {
     margin-top: 32px;
     display: flex;
     flex-wrap: wrap;
     max-width: 1000px;
     gap: 28px;
     padding-bottom: 112px;
-}
 
+    .portfolio-child {
+        position: relative;
+        z-index: 0;
 
-.portfolio-child {
+        .portfolio-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 54px;
 
-    img {
-        width: 442px;
-        height: 368px;
+            h3 {
+                color: #FA2759;
+                margin-block-end: 24px;
+                margin-block-start: 0;
+                font-size: 32px;
+                font-weight: 700;
+            }
+
+            span {
+                color: white;
+                font-size: 18px;
+            }
+
+            .portfolio-btns {
+                display: flex;
+                justify-content: center;
+                gap: 16px;
+
+                button {
+                    border: 1px solid #FA2759;
+                    width: 128px;
+                    height: 60px;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    cursor: pointer;
+                    font-weight: 500;
+                    font-size: 18px;
+                    color: #FA2759;
+
+                    &:hover {
+                        background-color: #FA2759;
+                        color: white;
+                    }
+                }
+            }
+
+        }
+
+        img {
+            width: 442px;
+            height: 368px;
+        }
+
+        &:hover .portfolio-hover {
+            z-index: 1;
+        }
+
+        &:hover img {
+            filter: brightness(0.25);
+        }
     }
 }
