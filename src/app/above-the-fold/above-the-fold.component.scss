@@ -18,6 +18,11 @@
         height: 78px;
         width: 300px;
         cursor: pointer;
+
+        &:hover {
+            background-color: #FA2759;
+            color: white;
+        }
     }
 
     span {

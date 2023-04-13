@@ -1,1 +1,25 @@
-<p>contact-form works!</p>
+
+<div>
+    <h2>Contact me.</h2>
+
+    <span>
+        Get in touch via the form below, or by emailing <span class="email-color">simon.besenbaeck@gmail.com</span> 
+    </span>
+
+    <form (submit)="sendMail()" ngNativeValidate #myForm>
+        
+        <label for="nameField">Name</label>
+        <input required type="text" name="name" #nameField placeholder="Enter your name">
+        
+        <label for="emailField">Email adress</label>
+        <input required type="email" name="email" #emailField placeholder="Enter your email adress">
+
+        <label for="messageField">Message</label>
+        <textarea required type="text" name="message" #messageField placeholder="Enter your message"></textarea>
+        
+        <div class="btn-ctn">
+            <button #sendButton>Senden</button>
+        </div>
+    </form>
+
+</div>

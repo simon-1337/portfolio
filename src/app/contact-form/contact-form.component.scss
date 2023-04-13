@@ -1,0 +1,81 @@
+h2 {
+    color: #2DFCD8;
+    font-weight: 700;
+    font-size: 64px;
+    margin-block-start: 64px;
+    margin-block-end: 16px;
+}
+
+span {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 18px;
+    opacity: 0.66;
+
+    .email-color {
+        color: #2DFCD8;
+    }
+}
+
+form {
+    margin-top: 42px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    padding-bottom: 64px;
+
+    label {
+        color: white;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    input {
+        width: 612px;
+        min-height: 39px;
+        background-color: #1A1A1A;
+        border: none;
+        outline-color: #2DFCD8; 
+        color: #2DFCD8;
+        padding-left: 12px;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    textarea {
+        height: 180px;
+        overflow-x: auto;
+        resize: none;
+        background-color: #1A1A1A;
+        border: none;
+        outline-color: #2DFCD8;
+        color: #2DFCD8;
+        padding: 12px;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .btn-ctn {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            width: 157px;
+            height: 60px;
+            background-color: transparent;
+            cursor: pointer;
+            border: 2px solid #2DFCD8;
+            color: #2DFCD8;
+            font-size: 18px;
+
+            &:hover {
+                background-color: #2DFCD8;
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+}
