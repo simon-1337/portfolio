@@ -18,9 +18,27 @@
         height: 78px;
         width: 300px;
         cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0;
+            background-color: #FA2759;
+            left: 0;
+            bottom: 0;
+            transition: all 225ms;
+            z-index:-1;
+        }
+
+        &:hover::before {
+            height: 100%;
+        }
 
         &:hover {
-            background-color: #FA2759;
             color: white;
         }
     }

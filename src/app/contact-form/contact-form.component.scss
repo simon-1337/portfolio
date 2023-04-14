@@ -6,14 +6,15 @@ h2 {
     margin-block-end: 16px;
 }
 
-span {
+.small-headline {
     color: #FFFFFF;
     font-weight: 500;
     font-size: 18px;
     opacity: 0.66;
 
-    .email-color {
+    a {
         color: #2DFCD8;
+        text-decoration: none;
     }
 }
 
@@ -37,10 +38,28 @@ form {
         background-color: #1A1A1A;
         border: none;
         outline-color: #2DFCD8; 
-        color: #2DFCD8;
+        color: white;
         padding-left: 12px;
         font-weight: 500;
         font-size: 18px;
+
+        &:-webkit-autofill {
+            background-color: #1A1A1A !important;
+            color: white !important;
+            border: none !important;
+            outline-color: #2DFCD8 !important;
+            -webkit-text-fill-color: white !important;
+            -webkit-box-shadow: 0 0 0 50px #1A1A1A inset;
+        }
+          
+        &:-moz-autofill {
+            background-color: #1A1A1A !important;
+            color: white !important;
+            border: none !important;
+            outline-color: #2DFCD8 !important;
+            -webkit-text-fill-color: white !important;
+            -webkit-box-shadow: 0 0 0 50px #1A1A1A inset;
+          }
     }
 
     textarea {
@@ -50,7 +69,7 @@ form {
         background-color: #1A1A1A;
         border: none;
         outline-color: #2DFCD8;
-        color: #2DFCD8;
+        color: white;
         padding: 12px;
         font-weight: 500;
         font-size: 18px;
@@ -69,10 +88,10 @@ form {
             color: #2DFCD8;
             font-size: 18px;
 
-            &:hover {
-                background-color: #2DFCD8;
-                color: black;
-                font-weight: bold;
+            &:hover, :focus {
+                box-shadow: 0 0.5em 0.5em -0.4em #2DFCD8 !important;
+                transform: translateY(-0.25em);
+                border: 2.5px solid #2DFCD8;
             }
         }
     }
