@@ -17,15 +17,33 @@ body {
 
 .grey-background {
     background-color: #131111;
+
+    @media (max-width: 870px) {
+        background-color: #000000;
+    }
 }
 
 .standard-padding-side {
     padding-left: 120px;
     padding-right: 120px;
+
+    @media (min-width: 1600px) {
+        padding-left: 164px;
+        padding-right: 164px;
+    }
+
+    @media (max-width: 1220px) {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
 }
 
 .standard-padding-bottom {
     padding-bottom: 138px;
+
+    @media (max-width: 870px) {
+        padding-bottom: 48px;
+    }
 }
 
 h2 {

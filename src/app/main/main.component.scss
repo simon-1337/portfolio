@@ -3,6 +3,14 @@ app-above-the-fold {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 870px) {
+        flex-direction: column-reverse;
+        padding-top: 100px;
+        justify-content: flex-end;
+        height: auto;
+        padding-bottom: 48px;
+    }
 }
 
 app-skills {
