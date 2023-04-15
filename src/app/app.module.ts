@@ -11,6 +11,9 @@ import { AboutComponent } from './about/about.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { DataProtectionComponent } from './data-protection/data-protection.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { FooterComponent } from './footer/footer.component';
     WorkComponent,
     AboutComponent,
     ContactFormComponent,
-    FooterComponent
+    FooterComponent,
+    ImprintComponent,
+    DataProtectionComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

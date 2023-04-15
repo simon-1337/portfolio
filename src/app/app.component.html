@@ -1,7 +1,5 @@
-<app-header></app-header>
-<app-above-the-fold class="dark-background standard-padding"></app-above-the-fold>
-<app-skills id="skills" class="grey-background standard-padding"></app-skills>
-<app-work id="work" class="dark-background standard-padding"></app-work>
-<app-about id="about" class="grey-background standard-padding"></app-about>
-<app-contact-form class="dark-background"></app-contact-form>
-<app-footer class="standard-padding"></app-footer>
+<app-header [darkMode]="router.url == '/imprint' || router.url == '/data-protection'"></app-header>
+<div [class.container]="router.url == '/imprint' || router.url == '/data-protection'">
+    <router-outlet></router-outlet>
+</div>
+<app-footer class="standard-padding-side"></app-footer>

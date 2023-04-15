@@ -1,6 +1,8 @@
-<header class="standard-padding">
-    <img routerLink="/" src="assets/img/logo_white.png">
-    <nav>
+<header class="standard-padding-side">
+    <img *ngIf="!darkMode" routerLink="/" src="assets/img/logo_white.png">
+    <img *ngIf="darkMode" routerLink="/" src="assets/img/logo_black.png">
+
+    <nav [class.darkLinks]="darkMode">
         <a href="#skills">SKILLS</a>
         <a href="#work">PORTFOLIO</a>
         <a href="#about">ABOUT ME</a>
