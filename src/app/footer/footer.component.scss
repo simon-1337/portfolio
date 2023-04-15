@@ -1,0 +1,20 @@
+.social-links {
+    display: flex;
+    gap: 90px;
+    
+    img {
+        height: 40px;
+        cursor: pointer;
+        display: block;
+    }
+}
+
+.legal-section {
+    color: #8491A0;
+    font-size: 18px;
+    font-weight: 400;
+
+    a {
+        cursor: pointer;
+    }
+}
