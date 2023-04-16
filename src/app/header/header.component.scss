@@ -24,7 +24,36 @@ header {
             font-weight: 500;
         }
     }
+
+    nav {
+        @media (max-width: 550px) {
+            display: none;
+        }
+    }
 }
+
+
+.hamburger-btn {
+    display: none;
+    height: 26px;
+    width: 32px;
+    cursor: pointer;
+
+
+    @media (max-width: 550px) {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    span {
+        height: 4px;
+        width: 100%;
+        border-radius: 9px;
+        background: white;
+    }
+}
+
 
 .darkLinks {
     a {

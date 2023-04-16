@@ -60,7 +60,11 @@ form {
             outline-color: #2DFCD8 !important;
             -webkit-text-fill-color: white !important;
             -webkit-box-shadow: 0 0 0 50px #1A1A1A inset;
-          }
+        }
+
+        @media (max-width: 870px) {
+            width: calc(100% - 12px);
+        }
     }
 
     textarea {
