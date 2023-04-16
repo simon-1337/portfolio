@@ -8,4 +8,14 @@ import { Component, Input } from '@angular/core';
 export class HeaderComponent {
 
   @Input() darkMode = false;
+
+  showMobile: Boolean = false;
+
+  openMobileMenu() {
+    this.showMobile = true;
+  }
+
+  closeMobileMenu() {
+    this.showMobile = false;
+  }
 }

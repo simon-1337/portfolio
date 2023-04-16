@@ -8,9 +8,20 @@
         <a href="#about">ABOUT ME</a>
     </nav>
 
-    <div class="hamburger-btn">
+    <div class="hamburger-btn" (click)="openMobileMenu()">
         <span [class.darkLines]="darkMode"></span>
         <span [class.darkLines]="darkMode"></span>
         <span [class.darkLines]="darkMode"></span>
     </div>
 </header>
+
+<div class="mobile-nav" [class.dark-mobile-nav]="darkMode" [ngClass]="{'inactive': !showMobile}" [ngClass]="{'active': showMobile}">
+    <img *ngIf="!darkMode" (click)="closeMobileMenu()" src="assets/img/close-white.png">
+    <img *ngIf="darkMode" (click)="closeMobileMenu()" src="assets/img/close-black.png">
+
+    <nav>
+        <a (click)="closeMobileMenu()" href="#skills">SKILLS</a>
+        <a (click)="closeMobileMenu()" href="#work">PORTFOLIO</a>
+        <a (click)="closeMobileMenu()" href="#about">ABOUT ME</a>
+    </nav>
+</div>

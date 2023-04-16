@@ -68,3 +68,64 @@ header {
 .darkLines {
     background: black !important;
 }
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index: 999;
+    transition: transform 225ms ease-in-out;
+    transform: translateX(100%);
+
+    img {
+        height: 32px;
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 80%;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+        
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+
+    }
+}
+
+.mobile-nav.active {
+    transform: translateX(0%);
+}
+
+.mobile-nav.inactive {
+    transform: translateX(100%);
+}
+
+
+.dark-mobile-nav {
+    background-color: white !important;
+
+    a {
+        color: black !important;
+    }
+}
