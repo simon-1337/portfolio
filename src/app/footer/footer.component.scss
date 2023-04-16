@@ -7,6 +7,10 @@
         cursor: pointer;
         display: block;
     }
+
+    @media (max-width: 800px) {
+        gap: 32px;
+    }
 }
 
 .legal-section {

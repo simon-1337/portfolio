@@ -25,6 +25,16 @@
             text-align: center;
         }
     }
+
+    @media (max-width: 620px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+
+        img {
+            width: fit-content;
+        }
+    }
 }
 
 .blue-line {
@@ -34,6 +44,10 @@
     border: 1px solid #2DFCD8;
     margin-top: 64px;
     margin-bottom: 96px;
+
+    @media (max-width: 870px) {
+        margin-bottom: 64px;
+    }
 
 }
 
@@ -72,5 +86,10 @@
                 width: 20px;
             }
         }
+    }
+
+    @media (max-width: 870px) {
+        flex-direction: column;
+        gap: 24px
     }
 }

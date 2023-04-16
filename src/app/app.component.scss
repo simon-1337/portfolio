@@ -4,6 +4,11 @@ app-footer {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 0;
+
+    @media (max-width: 420px) {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
 }
 
 .container {
@@ -11,4 +16,30 @@ app-footer {
     padding-left: 120px;
     padding-right: 120px;
     min-height: calc(100vh - 320px);
+
+    @media (min-width: 1600px) {
+        padding-left: 164px;
+        padding-right: 164px;
+    }
+
+    @media (max-width: 1220px) {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    @media (max-width: 710px) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+
+    @media (max-width: 600px) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    @media (max-width: 400px) {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
 }
