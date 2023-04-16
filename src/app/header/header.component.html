@@ -1,14 +1,14 @@
 <header class="standard-padding-side">
-    <img *ngIf="!darkMode" routerLink="/" src="assets/img/logo_white.png">
-    <img *ngIf="darkMode" routerLink="/" src="assets/img/logo_black.png">
+    <img class="slide-in-l" *ngIf="!darkMode" routerLink="/" src="assets/img/logo_white.png">
+    <img class="slide-in-l" *ngIf="darkMode" routerLink="/" src="assets/img/logo_black.png">
 
-    <nav [class.darkLinks]="darkMode">
+    <nav class="slide-in-r" [class.darkLinks]="darkMode">
         <a href="#skills">SKILLS</a>
         <a href="#work">PORTFOLIO</a>
         <a href="#about">ABOUT ME</a>
     </nav>
 
-    <div class="hamburger-btn" (click)="openMobileMenu()">
+    <div class="slide-in-r" class="hamburger-btn" (click)="openMobileMenu()">
         <span [class.darkLines]="darkMode"></span>
         <span [class.darkLines]="darkMode"></span>
         <span [class.darkLines]="darkMode"></span>

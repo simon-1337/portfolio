@@ -129,3 +129,29 @@ header {
         color: black !important;
     }
 }
+
+.slide-in-l {
+    animation: slide-in-l 1.2s ease-in-out;
+}
+
+@keyframes slide-in-l {
+    from {
+        transform: translateX(-250%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-in-r {
+    animation: slide-in-r 1.2s ease-in-out;
+}
+
+@keyframes slide-in-r {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

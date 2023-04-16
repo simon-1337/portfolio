@@ -13,6 +13,11 @@ export class ContactFormComponent {
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
 
+
+  sendingEmail: Boolean = false;
+  emailSent: Boolean = false;
+
+
   async sendMail() {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
@@ -24,7 +29,7 @@ export class ContactFormComponent {
     messageField.disabled = true;
     sendButton.disabled = true;
 
-    // send Animation (evtl mit variable)
+    this.sendingEmail = true;
 
     let fd = new FormData();
     fd.append('name', nameField.value);
@@ -38,6 +43,7 @@ export class ContactFormComponent {
       }
     );
 
+    this.sendingEmail = false;
     //Text anzeigen Nachricht gesendet (evtl mit Variable nicht sicher)
 
     nameField.value = '';
