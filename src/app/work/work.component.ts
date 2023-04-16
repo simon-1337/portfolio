@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-work',
@@ -7,6 +7,29 @@ import { Component } from '@angular/core';
 })
 export class WorkComponent {
 
+  firstSeen: Boolean = false;
+
+  constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const elements = document.querySelectorAll('.slide-in-element');
+    const screenHeight = window.innerHeight;
+
+    elements.forEach((element) => {
+      const position = element.getBoundingClientRect().top;
+
+      // Check if the top of the element is visible in the viewport
+      if (position - screenHeight <= 0) {
+        // Add the slide-in class to trigger the animation
+        this.renderer.addClass(element, 'slide-in');
+        if (element.id == 'joinImage') {
+          this.firstSeen = true;
+        }
+      }
+    });
+  }
+
   all: Boolean = true;
   js: Boolean = false;
   angular: Boolean = false;
@@ -14,15 +37,24 @@ export class WorkComponent {
   filterProjects(filter: string) {
     if (filter == "js") {
       this.setBackBoolValues()
-      this.js = true;
+      setTimeout(() => {
+        this.js = true;
+      }, 50);
+      
     }
     else if (filter == "angular") {
       this.setBackBoolValues()
-      this.angular = true;
+      setTimeout(() => {
+        this.angular = true;
+      }, 50);
+     
     }
     else {
       this.setBackBoolValues()
-      this.all = true;
+      setTimeout(() => {
+        this.all = true;
+      }, 50);
+      
     }
   }
 

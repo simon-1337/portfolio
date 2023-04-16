@@ -2,17 +2,22 @@
     height: 441px;
     background-color: #2DFCD8;
     border-radius: 100%;
+    width: 441px;
+    object-fit: contain;
 
     @media (max-width: 1300px) {
         height: 380px;
+        width: 380px;
     }
 
     @media (max-width: 1150px) {
         height: 320px;
+        width: 320px;
     }
     
     @media (max-width: 1000px) {
         height: 280px;
+        width: 280px;
     }
 }
 

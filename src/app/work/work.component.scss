@@ -1,6 +1,13 @@
+h2 {
+    transform: translateX(100%);
+    opacity: 0;  
+}
+
 .btn-section {
     display: flex;
     gap: 6px;
+    transform: translateX(100%);
+    opacity: 0;
 
     button {
         background-color: transparent;
@@ -44,6 +51,8 @@
     .portfolio-child {
         position: relative;
         z-index: 0;
+        opacity: 0;
+        transform: translateX(100%);
 
         .portfolio-hover {
             position: absolute;
@@ -156,3 +165,20 @@
         }
     }
 }
+
+.slide-in {
+    animation: slideIn 750ms ease-in-out 125ms forwards;
+}
+
+  
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }

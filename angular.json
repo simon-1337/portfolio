@@ -31,7 +31,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/fonts.css"
+              "src/assets/fonts.css",
+              "http://localhost:4200/styles.scss"
             ],
             "scripts": []
           },
@@ -95,7 +96,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/fonts.css"
+              "src/assets/fonts.css",
+              "http://localhost:4200/styles.scss"
             ],
             "scripts": []
           }

@@ -1,6 +1,6 @@
-<h2>My Work</h2>
+<h2 class="slide-in-element">My Work</h2>
 
-<div class="btn-section">
+<div class="btn-section slide-in-element">
     <button [ngClass]="{'btn-selected' : all}" (click)="filterProjects('all')">All</button>
     <button [ngClass]="{'btn-selected' : angular}" (click)="filterProjects('angular')">Angular</button>
     <button [ngClass]="{'btn-selected' : js}" (click)="filterProjects('js')">JavaScript</button>
@@ -10,7 +10,7 @@
 <div class="portfolio">
     
     <!--Join-->
-    <div *ngIf="all || js" class="portfolio-child">
+    <div *ngIf="all || js" [ngClass]="{'slide-in': (all || js) && firstSeen}" id="joinImage" class="portfolio-child slide-in-element">
         <div class="portfolio-hover">
             <div>
                 <h3>JOIN</h3>
@@ -25,7 +25,7 @@
     </div>
 
     <!--El Pollo Loco-->
-    <div *ngIf="all || js" class="portfolio-child">
+    <div *ngIf="all || js" [ngClass]="{'slide-in': (all || js) && firstSeen}" class="portfolio-child slide-in-element">
         <div class="portfolio-hover">
             <div>
                 <h3>EL POLLO LOCO</h3>
@@ -40,7 +40,7 @@
     </div>
 
     <!--Porfolio-->
-    <div *ngIf="all || angular" class="portfolio-child">
+    <div *ngIf="all || angular" [ngClass]="{'slide-in': (all || angular) && firstSeen}" class="portfolio-child slide-in-element">
         <div class="portfolio-hover">
             <div>
                 <h3>PORTFOLIO</h3>
@@ -51,11 +51,11 @@
                 <a href="https://github.com/simon-1337/portfolio" target="_blank">Github</a>
             </div>
         </div>
-        <img src="assets/img/portfolio_temp.jpg">
+        <img src="assets/img/portfolio.jpg">
     </div>
 
     <!--Angular Project 2-->
-    <div *ngIf="all || angular" class="portfolio-child">
+    <div *ngIf="all || angular" [ngClass]="{'slide-in': (all || angular) && firstSeen}" class="portfolio-child slide-in-element">
         <div class="portfolio-hover">
             <div>
                 <h3>RING OF FIRE</h3>

@@ -1,14 +1,12 @@
-* {
-    font-family: Inter, sans-serif;
-}
-
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    font-family: Inter, sans-serif;
 }
 
 body {
     margin: 0;
+    overflow-x: hidden !important;
 }
 
 

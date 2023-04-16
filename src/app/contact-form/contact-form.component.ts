@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-contact-form',
@@ -17,6 +17,8 @@ export class ContactFormComponent {
   sendingEmail: Boolean = false;
   emailSent: Boolean = false;
 
+
+  constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
 
   async sendMail() {
     let nameField = this.nameField.nativeElement;
@@ -54,7 +56,46 @@ export class ContactFormComponent {
     emailField.disabled = false;
     messageField.disabled = false;
     sendButton.disabled = false;
+  }
 
+
+ 
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.slideInNormal();
+    this.slideInLowOpacity();
 
   }
+
+  slideInNormal() {
+    const elements = document.querySelectorAll('.slide-in-element');
+    const screenHeight = window.innerHeight;
+
+    elements.forEach((element) => {
+      const position = element.getBoundingClientRect().top;
+
+      // Check if the top of the element is visible in the viewport
+      if (position - screenHeight <= 0) {
+        // Add the slide-in class to trigger the animation
+        this.renderer.addClass(element, 'slide-in');
+      }
+    });
+  }
+  
+  slideInLowOpacity() {
+    const elements = document.querySelectorAll('.slide-in-element-low-op');
+    const screenHeight = window.innerHeight;
+
+    elements.forEach((element) => {
+      const position = element.getBoundingClientRect().top;
+
+      // Check if the top of the element is visible in the viewport
+      if (position - screenHeight <= 0) {
+        // Add the slide-in class to trigger the animation
+        this.renderer.addClass(element, 'slide-in-low-op');
+      }
+    });
+  }
 }
+

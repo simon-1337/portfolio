@@ -4,13 +4,16 @@ h2 {
     font-size: 64px;
     margin-block-start: 64px;
     margin-block-end: 16px;
+    opacity: 0;
+    transform: translateX(100%);
 }
 
 .small-headline {
     color: #FFFFFF;
     font-weight: 500;
     font-size: 18px;
-    opacity: 0.66;
+    opacity: 0;
+    transform: translateX(100%);
 
     a {
         color: #2DFCD8;
@@ -25,6 +28,8 @@ form {
     gap: 20px;
     position: relative;
     padding-bottom: 64px;
+    opacity: 0;
+    transform: translateX(100%);
 
     label {
         color: white;
@@ -141,3 +146,33 @@ form {
     }
 }
 
+
+.slide-in {
+    animation: slideIn 750ms ease-in-out 125ms forwards;
+  }
+
+.slide-in-low-op {
+    animation: slideInLowOp 750ms ease-in-out 125ms forwards;
+} 
+  
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLowOp {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 0.66;
+        transform: translateX(0);
+    }
+}

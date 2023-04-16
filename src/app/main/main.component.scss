@@ -23,6 +23,8 @@ app-work {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
+    min-height: 645px;
 }
 
 app-about {
