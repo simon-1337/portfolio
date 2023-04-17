@@ -10,6 +10,10 @@ export class AboutComponent {
   constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
 
   @HostListener('window:scroll', [])
+
+  /**
+   * This function is used to check if an element is in the Screen and adds the slide in class to this element
+   */
   onWindowScroll() {
     const elements = document.querySelectorAll('.slide-in-element');
     const screenHeight = window.innerHeight;

@@ -65,12 +65,21 @@ export class ContactFormComponent {
  
 
   @HostListener('window:scroll', [])
+
+
+  /**
+   * This fuction checks if the user scrolls and if so calls the two functions to slide in elements
+   */
   onWindowScroll() {
     this.slideInNormal();
     this.slideInLowOpacity();
 
   }
 
+
+  /**
+   * This function is used to check if an element is in the Screen and adds the slide in class to this element
+   */
   slideInNormal() {
     const elements = document.querySelectorAll('.slide-in-element');
     const screenHeight = window.innerHeight;
@@ -86,6 +95,10 @@ export class ContactFormComponent {
     });
   }
   
+
+  /**
+   * This function is used to check if an element is in the Screen and adds the slide in class to this element (in this case with a lower opacity)
+   */
   slideInLowOpacity() {
     const elements = document.querySelectorAll('.slide-in-element-low-op');
     const screenHeight = window.innerHeight;

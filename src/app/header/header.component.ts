@@ -11,10 +11,17 @@ export class HeaderComponent {
 
   showMobile: Boolean = false;
 
+  /**
+   * This function is used to set the variable to show the mobile menu to true
+   */
   openMobileMenu() {
     this.showMobile = true;
   }
 
+
+  /**
+   * This function is used to set the variable to show the mobile menu to false
+   */
   closeMobileMenu() {
     this.showMobile = false;
   }
