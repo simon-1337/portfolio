@@ -7,9 +7,10 @@ app-above-the-fold {
     @media (max-width: 870px) {
         flex-direction: column-reverse;
         padding-top: 100px;
-        justify-content: flex-end;
+        justify-content: center;
         height: auto;
         padding-bottom: 48px;
+        min-height: calc(100vh - 148px);
     }
 }
 

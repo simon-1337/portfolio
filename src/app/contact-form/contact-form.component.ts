@@ -46,7 +46,10 @@ export class ContactFormComponent {
     );
 
     this.sendingEmail = false;
-    //Text anzeigen Nachricht gesendet (evtl mit Variable nicht sicher)
+    this.emailSent = true;
+    setTimeout(() => {
+      this.emailSent = false;
+    }, 1500);
 
     nameField.value = '';
     emailField.value = '';
