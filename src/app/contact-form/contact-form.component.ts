@@ -32,6 +32,7 @@ export class ContactFormComponent {
     sendButton.disabled = true;
 
     this.sendingEmail = true;
+    this.emailSent = false;
 
     let fd = new FormData();
     fd.append('name', nameField.value);
@@ -47,9 +48,6 @@ export class ContactFormComponent {
 
     this.sendingEmail = false;
     this.emailSent = true;
-    setTimeout(() => {
-      this.emailSent = false;
-    }, 1500);
 
     nameField.value = '';
     emailField.value = '';

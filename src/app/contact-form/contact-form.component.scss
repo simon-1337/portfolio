@@ -154,6 +154,11 @@ form {
     }
 }
 
+.emailSentCtn {
+    display: flex;
+    justify-content: space-between !important;
+}
+
 
 .slide-in {
     animation: slideIn 750ms ease-in-out 125ms forwards;

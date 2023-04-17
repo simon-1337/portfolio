@@ -17,16 +17,16 @@
         <label for="messageField">Message</label>
         <textarea required type="text" name="message" #messageField placeholder="Enter your message"></textarea>
         
-        <div class="btn-ctn">
-            <button *ngIf="!sendingEmail && !emailSent" #sendButton>Senden</button>
+        <div class="btn-ctn" [ngClass]="{'emailSentCtn': emailSent}">
+            <span *ngIf="emailSent">Email sent successfully!</span>
+
+            <button *ngIf="!sendingEmail" #sendButton>Senden</button>
 
             <div *ngIf="sendingEmail" class="spinner-box">
                 <div class="circle-box">
                     <div class="circle-core"></div>
                 </div>
             </div>
-
-            <span *ngIf="emailSent">Email sent successfully!</span>
         </div>
 
 
