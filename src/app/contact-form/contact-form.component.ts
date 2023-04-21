@@ -39,7 +39,7 @@ export class ContactFormComponent {
     fd.append('email', emailField.value);
     fd.append('message', messageField.value);
 
-    await fetch('https://simon-besenbaeck.developerakademie.net/send_mail/send_mail.php',
+    await fetch('https://simon-besenbaeck.com/send_mail/send_mail.php',
       {
         method: 'POST',
         body: fd
