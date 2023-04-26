@@ -9,9 +9,17 @@ header {
     align-items: center;
     justify-content: space-between;
 
+    @media (min-width: 1600px) {
+        height: 120px;
+    }
+
     img {
         height: 50px;
         cursor: pointer;
+
+        @media (min-width: 1600px) {
+            height: 68px;
+        }
     }
 
     a {
@@ -22,6 +30,10 @@ header {
         &:hover {
             color: #FA2759;
             font-weight: 500;
+        }
+
+        @media (min-width: 1600px) {
+            font-size: 24px;
         }
     }
 

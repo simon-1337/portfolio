@@ -1,9 +1,14 @@
 .profile-img {
-    height: 210px;
-    width: 210px !important;
+    height: 260px;
+    width: 260px !important;
     background-color: #2DFCD8;
     border-radius: 100%;
     object-fit: contain;
+
+    @media (max-width: 1700px) {
+        height: 210px;
+        width: 210px !important;
+    }
 }
 
 .upper-section {
@@ -28,7 +33,15 @@
         span {
             color: white;
             text-align: center;
-            font-size: 18px;
+            font-size: 24px;
+
+            @media (max-width: 1950px) {
+                font-size: 21px;
+            }
+
+            @media (max-width: 1700px) {
+                font-size: 18px;
+            }
         }
 
         @media (max-width: 870px) {
@@ -76,11 +89,29 @@
         h3 {
             margin-block-start: 22px;
             margin-block-end: 12px;
+            font-size: 24px;
+
+            @media (max-width: 1950px) {
+                font-size: 21px;
+            }
+
+            @media (max-width: 1700px) {
+                font-size: 18px;
+            }
+            
         }
 
         span {
-            font-size: 18px;
+            font-size: 24px;
             font-weight: 400;
+
+            @media (max-width: 1950px) {
+                font-size: 21px;
+            }
+
+            @media (max-width: 1700px) {
+                font-size: 18px;
+            }
         }
 
         .image-ctn {

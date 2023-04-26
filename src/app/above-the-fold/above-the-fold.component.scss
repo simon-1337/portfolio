@@ -1,11 +1,22 @@
 .profile-img {
-    height: 441px;
+    height: 520px;
     background-color: #2DFCD8;
     border-radius: 100%;
-    width: 441px;
+    width: 520px;
     object-fit: contain;
 
-    @media (max-width: 1300px) {
+    @media (max-width: 2000px) {
+        height: 480px;
+        width: 480px;
+    }
+
+
+    @media (max-width: 1700px) {
+        height: 441px;
+        width: 441px;
+    }
+
+    @media (max-width: 1420px) {
         height: 380px;
         width: 380px;
     }
@@ -64,6 +75,12 @@
             color: white;
         }
 
+        @media (min-width: 1700px) {
+            height: 100px;
+            width: 400px;
+            font-size: 28px;
+        }
+
         @media (max-width: 870px) {
             width: 100%;
         }
@@ -72,10 +89,20 @@
     span {
         color: white;
         font-weight: 700;
-        font-size: 68px;
-        line-height: 80px;
+        font-size: 80px;
+        line-height: 92px;
 
-        @media (max-width: 1300px) {
+        @media (max-width: 2000px) {
+            font-size: 74px;
+            line-height: 86px;
+        }
+
+        @media (max-width: 1700px) {
+            font-size: 68px;
+            line-height: 80px;
+        }
+
+        @media (max-width: 1420px) {
             font-size: 56px;
             line-height: 68px;
         }

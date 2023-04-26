@@ -3,9 +3,13 @@
     gap: 90px;
     
     img {
-        height: 40px;
+        height: 56px;
         cursor: pointer;
         display: block;
+
+        @media (max-width: 1700px) {
+            height: 40px;
+        }
     }
 
     @media (max-width: 800px) {
@@ -15,12 +19,20 @@
 
 .legal-section {
     color: #8491A0;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 400;
 
     a {
         cursor: pointer;
         text-decoration: none;
         color: #8491A0;
+    }
+
+    @media (max-width: 1950px) {
+        font-size: 21px;
+    }
+
+    @media (max-width: 1700px) {
+        font-size: 18px;
     }
 }

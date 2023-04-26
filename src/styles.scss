@@ -23,12 +23,33 @@ body {
 }
 
 .standard-padding-side {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 500px;
+    padding-right: 500px;
 
-    @media (min-width: 1600px) {
-        padding-left: 164px;
-        padding-right: 164px;
+    @media (max-width: 2445px) {
+        padding-left: 380px;
+        padding-right: 380px;
+    }
+
+    @media (max-width: 2200px) {
+        padding-left: 280px;
+        padding-right: 280px;
+    }
+
+    @media (max-width: 2000px) {
+        padding-left: 280px;
+        padding-right: 280px;
+    }
+
+    @media (max-width: 1880px) {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+
+    @media (max-width: 1600px) {
+        padding-left: 120px;
+        padding-right: 120px;
     }
 
     @media (max-width: 1220px) {
@@ -63,8 +84,12 @@ body {
 
 h2 {
     color: white;
-    font-size: 36px;
     font-weight: 500;
+    font-size: 48px;
     margin-block-start: 48px;
     margin-block-end: 48px;
+
+    @media (max-width: 1700px) {
+        font-size: 36px;
+    }
 }
