@@ -20,24 +20,28 @@ export class ContactFormComponent {
 
   constructor(private elementRef: ElementRef, private renderer: Renderer2) {}
 
+
+  /**
+   * This function is used to call all necessary functions for the process of sending an email
+   */
   async sendMail() {
-    let nameField = this.nameField.nativeElement;
-    let emailField = this.emailField.nativeElement;
-    let messageField = this.messageField.nativeElement;
-    let sendButton = this.sendButton.nativeElement;
+    this.disableInputFields();
+    this.enableSendingAnimation();
+    await this.createEmail();
+    this.disableSendingAnimation();
+    this.clearInputFields();
+    this.enableInputFields();
+  }
 
-    nameField.disabled = true;
-    emailField.disabled = true;
-    messageField.disabled = true;
-    sendButton.disabled = true;
 
-    this.sendingEmail = true;
-    this.emailSent = false;
-
+  /**
+   * This function is used to add the email content and send the email itself
+   */
+  async createEmail() {
     let fd = new FormData();
-    fd.append('name', nameField.value);
-    fd.append('email', emailField.value);
-    fd.append('message', messageField.value);
+    fd.append('name',this.nameField.nativeElement.value);
+    fd.append('email', this.emailField.nativeElement.value);
+    fd.append('message', this.messageField.nativeElement.value);
 
     await fetch('https://simon-besenbaeck.com/send_mail/send_mail.php',
       {
@@ -45,22 +49,57 @@ export class ContactFormComponent {
         body: fd
       }
     );
-
-    this.sendingEmail = false;
-    this.emailSent = true;
-
-    nameField.value = '';
-    emailField.value = '';
-    messageField.value = '';
-
-    nameField.disabled = false;
-    emailField.disabled = false;
-    messageField.disabled = false;
-    sendButton.disabled = false;
   }
 
 
+  /**
+   * This function is used to disable the input fields while the sending process
+   */
+  disableInputFields() {
+    this.nameField.nativeElement.disabled = true;
+    this.emailField.nativeElement.disabled = true;
+    this.messageField.nativeElement.disabled = true;
+  }
+
+
+  /**
+   * This function is used to set the variables so that the sending animation is played
+   */
+  enableSendingAnimation() {
+    this.sendingEmail = true;
+    this.emailSent = false;
+  }
+
+
+  /**
+   * This function is used to set the variables so that the sending animation is stopped and sent successfull is displayed
+   */
+  disableSendingAnimation() {
+    this.sendingEmail = false;
+    this.emailSent = true;
+  }
  
+
+  /**
+   * This function is used to clear the input fields after the email has been sent
+   */
+  clearInputFields() {
+    this.nameField.nativeElement.value = '';
+    this.emailField.nativeElement.value = '';
+    this.messageField.nativeElement.value = '';
+  }
+
+
+  /**
+   * This function is used to reenable the input fields after the email has been sent
+   */
+  enableInputFields() {
+    this.nameField.nativeElement.disabled = false;
+    this.emailField.nativeElement.disabled = false;
+    this.messageField.nativeElement.disabled = false;
+  }
+
+
 
   @HostListener('window:scroll', [])
 

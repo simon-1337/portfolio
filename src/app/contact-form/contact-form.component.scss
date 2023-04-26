@@ -125,6 +125,14 @@ form {
         font-weight: 500;
         font-size: 24px;
         caret-color: white;
+
+        @media (max-width: 1950px) {
+            font-size: 21px;
+        }
+
+        @media (max-width: 1700px) {
+            font-size: 18px;
+        }
     }
 
     .btn-ctn {
